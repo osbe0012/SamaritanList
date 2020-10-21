@@ -1,0 +1,44 @@
+body {
+	padding: 0;
+	position: relative;
+	background: #03befc;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.button {
+	background: #DDDDDD;
+	border: 2pt solid #AAAAAA;
+	border-radius: 4pt;
+	text-decoration: none;
+	padding: 10pt;
+	color: blue;
+}
+
+.bordered {
+	border: solid 1pt black;
+	padding: 10pt;
+	border-radius: 4pt;
+}
+
+
+#taskTable {
+	background: #0099CC;
+	border-radius: 4pt;
+	border: solid 7pt #0087B7;
+	width: 100%;
+}
+
+#taskAddition {
+	background: #33DDFF;
+	border-radius: 4pt;
+	border: solid 7pt #17B7D7;
+	padding-top: 10pt;
+}
+
+#helperAddition {
+	background: #33DDFF;
+	border-radius: 4pt;
+	border: solid 7pt #17B7D7;
+	padding-top: 10pt;
+}
