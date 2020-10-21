@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% from "_formhelpers.html" import render_field %}
+{% block title %} SamaritanList {% endblock %}
+{% block header %} SamaritanList {% endblock %}
+{% block content %}
+	<div id='taskAddition'>
+		<form action='/tasks/new' method='POST'>
+		{{ taskForm.hidden_tag() }}
+		{{ render_field(taskForm.taskName) }}
+		<br>
+		{{ render_field(taskForm.taskDescription) }}
+		<br>
+		{{ taskForm.submit() }}
+		</form>
+	</div>
+	<table id='taskTable'>
+	{% for task in tasks %}
+		<tr>
+			<td class='bordered'>{{ task.taskName }}</td>
+			<td class='bordered'>{{ task.taskDescription }}</td>
+				<td class='bordered'>
+					<table>
+					{% for helper in helpers %}
+						{% if helper.helperInstanceTaskId == task.taskId %}
+							<tr><td>{{ helper.helperInstanceName }}</td></tr>
+						{% endif %}
+					{% endfor %}
+					</table>
+				</td>
+				<td class='bordered'><a href='/helper/{{ task.taskId }}' class='button'>Join</a></td>
+			</tr>
+	{% endfor %}
+	</table>
+{% endblock %}

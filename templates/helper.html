@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% from "_formhelpers.html" import render_field %}
+{% block title %} SamaritanList {% endblock %}
+{% block header %} Join Task {% endblock %}
+{% block content %}
+	<div id='helperAddition'>
+		<form action='/helper/new/{{ taskId }}' method='POST'>
+		{{ helperForm.hidden_tag() }}
+		{{ render_field(helperForm.helperInstanceName) }}
+		<br>
+		{{ helperForm.submit() }}
+		</form>
+	</div>
+{% endblock %}

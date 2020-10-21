@@ -1,0 +1,19 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script type='text/javascript'src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<title>{% block title %} SamaritanList {% endblock %}</title>
+	<h1>{% block header %} SamaritanList: The portal for finding and providing help {% endblock %}</h1>
+	
+	{% block content%}
+	
+	{% endblock %}
+	
+	{% block footer %}
+	
+	{% endblock %}
+</body>
+</html>
